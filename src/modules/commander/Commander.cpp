@@ -1961,7 +1961,8 @@ Commander::run()
 			/* ESCs status changed */
 			esc_status_check();
 
-		} else if (hrt_elapsed_time(&_last_esc_status_updated) > 700_ms) {
+		} else if ((_esc_connectiontype == esc_status_s::ESC_CONNECTION_TYPE_DSHOT)
+			   && hrt_elapsed_time(&_last_esc_status_updated) > 700_ms) {
 			// Some DShot ESCs are unresponsive for ~550ms during their initialization, so we use a timeout higher than that
 
 			if (!_status_flags.condition_escs_error) {
@@ -3944,6 +3945,10 @@ void Commander::esc_status_check()
 	esc_status_s esc_status{};
 
 	_esc_status_sub.copy(&esc_status);
+
+	if (_esc_connectiontype != esc_status.esc_connectiontype) {
+		_esc_connectiontype = esc_status.esc_connectiontype;
+	}
 
 	if (esc_status.esc_count > 0) {
 
