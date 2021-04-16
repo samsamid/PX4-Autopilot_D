@@ -95,4 +95,6 @@ px4_add_romfs_files(
 	vtol_delta.aux.mix
 	vtol_tailsitter_duo.main.mix
 	wingwing.main.mix
+	Ruexue3.main.mix
+	y_vtol_ruexue.aux.mix
 )
