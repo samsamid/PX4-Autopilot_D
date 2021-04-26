@@ -140,7 +140,7 @@ px4_add_romfs_files(
 	13030_generic_vtol_quad_tiltrotor
 	13050_generic_vtol_octo
 	13200_generic_vtol_tailsitter
-	13287_DRAKKAR_vtol_y_tilt
+	13287_DRAKKAR_MANTA
 
 	# [14000, 14999] Tri Y
 	14001_tri_y_yaw+
