@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# @name DRAKKAR VTOL_Tilt_Rear
+# @name DRAKKAR MANTA
 #
 # @type VTOL Tiltrotor
 # @class VTOL
@@ -17,6 +17,7 @@
 # @output AUX4 Elevator
 # @output AUX5 Rudder
 #
+# @board px4_fmu-v2 exclude
 # @board bitcraze_crazyflie exclude
 #
 
@@ -37,6 +38,18 @@ param set-default MPC_LAND_SPEED 1.2
 param set-default MPC_TKO_SPEED 2.5
 param set-default MPC_Z_VEL_MAX_UP 3
 
+param set-default COM_POWER_COUNT 0
+param set-default FW_ARSP_MODE 1
+param set-default CBRK_AIRSPD_CHK 162128
+param set-default RC_MAP_ARM_SW Channel 6
+param set-default RC_MAP_FLTMODE Channel 5
+param set-default RC_MAP_TRANS_SW Channel 7
+
+#FW TECH
+param set-default FW_AIRSPD_MAX 30
+param set-default FW_AIRSPD_TRIM 25
+param set-default FW_AIRSPD_MMIN 10
+
 param set-default PWM_MAIN_RATE 400
 
 param set-default VT_B_TRANS_DUR  1
@@ -44,7 +57,7 @@ param set-default VT_F_TRANS_DUR  1.2
 param set-default VT_F_TR_OL_TM   4
 param set-default VT_FW_DIFTHR_EN 1
 param set-default VT_FW_DIFTHR_SC 0.17
-param set-default VT_FW_MOT_OFFID 3
+param set-default VT_FW_MOT_OFFID 12
 param set-default VT_FW_PERM_STAB 0
 param set-default VT_IDLE_PWM_MC 1100
 param set-default VT_MOT_ID 123
