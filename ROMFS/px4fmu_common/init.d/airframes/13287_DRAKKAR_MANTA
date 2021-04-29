@@ -42,9 +42,7 @@ param set-default MPC_Z_VEL_MAX_UP 3
 param set-default COM_POWER_COUNT 0
 param set-default FW_ARSP_MODE 1
 param set-default CBRK_AIRSPD_CHK 162128
-param set-default RC_MAP_ARM_SW Channel 6
-param set-default RC_MAP_FLTMODE Channel 5
-param set-default RC_MAP_TRANS_SW Channel 7
+
 
 #FW TECH
 param set-default FW_AIRSPD_MAX 30
